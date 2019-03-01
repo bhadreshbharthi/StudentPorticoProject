@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ProjectCode.Models.facultymaster>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="dt">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.facname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emailid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.facname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emailid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.facid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.facid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.facid })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ProjectCode.Models.feedbackmaster>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="dt">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fdesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.femailid)
+            </th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fdesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fitme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.femailid)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.fid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.fid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.fid })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+

@@ -1,0 +1,50 @@
+﻿@model ProjectCode.Models.feedbackmaster
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>feedbackmaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fdesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fdesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fitme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fitme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.femailid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.femailid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.fid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,19 @@
+﻿
+
+@if (TempData["Error"] != null)
+{
+
+    <div class="alert alert-danger">
+        @TempData["Error"].ToString()
+    </div>
+
+}
+else if(TempData["Message"]!=null)
+{
+
+    <div class="alert alert-success">
+        @TempData["Message"].ToString()
+    </div>
+
+}
+
